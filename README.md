@@ -37,20 +37,7 @@ flutter run
 
 ### **2️⃣ Configurar o Backend**
 ```bash
-cd server/
-pip install -r requirements.txt
-uvicorn main:app --reload
+poetry install
+poetry env activate
+python3 server/main.py
 ```
-
-### **3️⃣ Compilar para Android**
-```bash
-cd client/
-buildozer -v android debug
-```
-
-## 🛠️ Problemas Conhecidos
-- O sensor de proximidade **não funciona no emulador**, apenas em dispositivos reais.
-- O Buildozer pode precisar de pacotes adicionais no Linux, como `Cython` e `autoconf`.
-
-## 📜 Licença
-Este projeto está licenciado sob a **MIT License**.
