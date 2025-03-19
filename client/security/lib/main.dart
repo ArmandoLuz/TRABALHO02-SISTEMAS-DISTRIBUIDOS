@@ -81,7 +81,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> _sendToServer(File imageFile) async {
     Socket? socket;
     try {
-      socket = await Socket.connect('192.168.10.16', 5000);
+      socket = await Socket.connect('10.121.2.125', 5000);
       Uint8List imageBytes = await imageFile.readAsBytes();
       socket.add(imageBytes);
       await socket.flush();
